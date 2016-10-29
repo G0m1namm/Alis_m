@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ALIS</title>
+    <script src="lib/phaser.js"></script>
+    <script src="states/Boot.js"></script>
+    <script src="states/Preloader.js"></script>
+    <script src="states/MainMenu.js"></script>
+    <script src="states/Game.js"></script>
+    <script src="ent/Map.js"></script>
+    <script src="ent/Scene.js"></script>
+    <script src="ent/Player.js"></script>
+    <script src="ent/Shader.js"></script>
+    
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+    window.onload = function() {
+
+        var game = new Phaser.Game(1280, 720, Phaser.WEBGL, '');
+
+        game.state.add('Boot', BasicGame.Boot);
+        game.state.add('Preloader', BasicGame.Preloader);
+        game.state.add('MainMenu', BasicGame.MainMenu);
+        game.state.add('Game', BasicGame.Game);
+
+        //	Now start the Boot state.
+        game.state.start('Boot');
+
+    };
+    </script>
+</body>
+
+</html>
