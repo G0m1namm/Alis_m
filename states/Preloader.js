@@ -39,7 +39,7 @@ BasicGame.Preloader.prototype = {
 
         //Shaders
         this.load.script('filter-vignette', 'assets/shaders/Vignette.js');
-        //game.load.script('filter-snoise', 'assets/shaders/SNoise.js');
+        this.load.script('filter-snoise', 'assets/shaders/SNoise.js');
         this.load.script('filter-filmgrain', 'assets/shaders/FilmGrain.js');
 
 

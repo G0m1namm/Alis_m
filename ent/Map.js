@@ -14,6 +14,10 @@ Map.prototype.createLayer = function(game, map, layerid, tileset, resize) {
     if (resize) {
         layer.resizeWorld();
     }
+    if(layerid == "col_layer"){
+    	  map.map.setCollision(1);
+    }
+    
     return layer;
 };
 
