@@ -87,7 +87,7 @@ BasicGame.MainMenu.prototype = {
 
 
         for (var i = 0; i < buttonText.length; i++) {
-            var text = this.game.add.bitmapText(title.x, title.y, 'font', buttonText[i], 16);
+            var text = this.game.add.bitmapText(title.x, title.y, 'font', buttonText[i], 18);
             text.anchor.setTo(0.5, 0.5);
             text.inputEnabled = true;
             text.alpha = 0;
@@ -116,8 +116,8 @@ BasicGame.MainMenu.prototype = {
         }, this);
 
 
-        selector_bracket_left = this.game.add.bitmapText(0, 0, 'font', '[', 16);
-        selector_bracket_right = this.game.add.bitmapText(0, 0, 'font', ']', 16);
+        selector_bracket_left = this.game.add.bitmapText(0, 0, 'font', '[', 24);
+        selector_bracket_right = this.game.add.bitmapText(0, 0, 'font', ']', 24);
         left.onDown.add(function() {
             button_selected += 1;
         }, this);
@@ -150,10 +150,10 @@ BasicGame.MainMenu.prototype = {
                 button_selected = 0;
             }
             counter++;
-            selector_bracket_left.x = buttons[button_selected].x - buttons[button_selected].width / 2 - Math.cos(counter / 25) * 10 - 20;
-            selector_bracket_left.y = buttons[button_selected].y - buttons[button_selected].height / 2;
+            selector_bracket_left.x = buttons[button_selected].x - buttons[button_selected].width / 2 - Math.cos(counter / 25) * 10 - 25;
+            selector_bracket_left.y = buttons[button_selected].y - buttons[button_selected].height / 2-4;
             selector_bracket_right.x = buttons[button_selected].x + buttons[button_selected].width / 2 + Math.cos(counter / 25) * 10 + 5;
-            selector_bracket_right.y = buttons[button_selected].y - buttons[button_selected].height / 2;
+            selector_bracket_right.y = buttons[button_selected].y - buttons[button_selected].height / 2-4;
 
 
             if (button_selected == 0 && enter.isDown){
